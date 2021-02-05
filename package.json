@@ -1,0 +1,11 @@
+{
+  "name": "gen-package-defines-plugin",
+  "displayName": "导出类定义",
+  "description": "将设置为导出的组件定义导出",
+  "version": "1.0",
+  "author": {
+    "name": "xin"
+  },
+  "icon": "",
+  "main": "main.js"
+}
