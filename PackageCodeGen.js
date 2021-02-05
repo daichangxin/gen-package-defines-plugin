@@ -32,9 +32,9 @@ class PackageCodeGen {
             }
             else {
                 const itemTypeClassInfo = this._classInfoDic[item.type];
-                if (itemTypeClassInfo && !itemTypeClassInfo.isCreateCode && itemTypeClassInfo.members.Count > 0) {
+                if (itemTypeClassInfo) {
                     this.createClassCodes(itemTypeClassInfo);
-                    classCodes.push(`\t${item.varName}: ${item.type};`);
+                    classCodes.push(`\t${item.varName}: ${itemTypeClassInfo.superClassName} & { $skin: ${item.type} };`);
                 }
                 else {
                     classCodes.push(`\t${item.varName}: fgui.GObject;`);

@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.genCode = void 0;
 const CodeWriter_1 = require("./CodeWriter");
 const PackageCodeGen_1 = require("./PackageCodeGen");
-exports.genCode = (handler) => {
+const genCode = (handler) => {
     // convert chinese to pinyin, remove special chars etc.
     const codePkgName = handler.ToFilename(handler.pkg.name);
     const exportCodePath = `${handler.exportCodePath}`;
@@ -26,3 +26,4 @@ exports.genCode = (handler) => {
     }
     writer.save(`${exportCodePath}/${codePkgName}.ts`);
 };
+exports.genCode = genCode;
