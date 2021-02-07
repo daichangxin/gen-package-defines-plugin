@@ -2,48 +2,14 @@
 将包中设置为“导出”的组件导出interface定义。
 
 ### 使用
-使用Fairy Editor，将整个目录复制到项目的插件目录。
+- 使用Fairy Editor，将整个目录复制到项目的插件目录。
 
-代码做处理，主要是在创建组件时将子对象抽出来方便获取。
-```
-export function getMembersInfo(skin: fairygui.GComponent) {
-    const result = {};
-    //children
-    let i, len = 0;
-    for (i = 0, len = skin.numChildren; i < len; i++) {
-        const child = skin.getChildAt(i);
-        const childName = child.name;
-        //忽略空命名
-        if (isDefaultName(childName)) continue;
-        result[childName] = child;
-    }
-    //transition
-    let t_arr: fairygui.Transition[] = skin['_transitions'];
-    for (i = 0, len = t_arr.length; i < len; i++) {
-        const t = t_arr[i];
-        const tName = t.name;
-        //忽略空命名
-        if (isDefaultName(tName)) continue;
-        result[tName] = t;
-    }
-    //controller
-    let c_arr: fairygui.Controller[] = skin['_controllers'];
-    for (i = 0, len = c_arr.length; i < len; i++) {
-        const c = c_arr[i];
-        const cName = c.name;
-        //忽略空命名
-        if (isDefaultName(cName)) continue;
-        result[cName] = c;
-    }
-    return result;
-}
+### 代码做处理，主要是在创建组件时将子对象抽出来方便获取。
 
-export function isDefaultName(name: string) {
-    if (!name) return true;
-    const first_char = name.charAt(0);
-    if (first_char == 'n' || first_char == 'c' || first_char == 't') {
-        return !isNaN(parseInt(name.substr(1)));
-    }
-    return false;
-}
-```
+##### 1 覆盖fairygui默认组件创建方法：
+<script src="https://gist.github.com/daichangxin/6d509e08d67fe2603656d59d329a1549.js"></script>
+##### 2 FairySkinBase：
+<script src="https://gist.github.com/daichangxin/e910206c4ab218471b4abc2b2f77d999.js"></script>
+
+##### 3 其中getMembersInfo
+<script src="https://gist.github.com/daichangxin/dd69b8325e1bd82756432f4681a566f5.js"></script>
