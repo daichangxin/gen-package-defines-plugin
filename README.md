@@ -1,5 +1,5 @@
 ## gen-package-defines-plugin
-将包中设置为“导出”的组件导出interface定义。
+将包中设置为“导出”的组件导出interface定义。适合typescript项目，如Egret、Laya、CocosCreator...
 
 ## 使用
 ### 使用Fairy Editor，将整个目录复制到项目的插件目录。
@@ -16,7 +16,7 @@ https://gist.github.com/daichangxin/e910206c4ab218471b4abc2b2f77d999
 https://gist.github.com/daichangxin/dd69b8325e1bd82756432f4681a566f5
 
 ## 代码导出风格如下：
-1、每个fairygui的包，导出对应一个文件，如包名为farm,则导出的文件是`${设置的导出目录}/farm.ts`
+1、每个fairygui的包，导出对应一个文件，如包名为farm，则导出的文件是`${设置的导出目录}/farm.ts`
 
 2、为了方便区分定义导出，所有文件默认添加`namespace c`作为命名空间。
 
