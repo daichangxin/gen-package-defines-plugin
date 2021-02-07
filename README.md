@@ -38,4 +38,4 @@ export interface dele_plantItem {
     beanIcon: fgui.GImage;
 }
 ```
-其中，dele_plantItem是设置为导出类型的自定义组件，组件的子对象`itemCountUI`也是一个自定义组件，虽然未设置导出，也会被导出出来。
+其中，`dele_plantItem`是设置为导出类型的自定义组件，组件的子对象`itemCountUI`也是一个自定义组件，虽然未设置导出，但因为被引用到也会被导出出来。
