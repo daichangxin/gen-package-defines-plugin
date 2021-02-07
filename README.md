@@ -1,21 +1,21 @@
 ## gen-package-defines-plugin
 将包中设置为“导出”的组件导出interface定义。
 
-### 使用
-- 使用Fairy Editor，将整个目录复制到项目的插件目录。
+## 使用
+### 使用Fairy Editor，将整个目录复制到项目的插件目录。
 
 ### 代码做处理，主要是在创建组件时将子对象抽出来方便获取。
 
-##### 1 覆盖fairygui默认组件创建方法：
+- 1 覆盖fairygui默认组件创建方法：
 https://gist.github.com/daichangxin/6d509e08d67fe2603656d59d329a1549
 
-##### 2 FairySkinBase：
+- 2 FairySkinBase：
 https://gist.github.com/daichangxin/e910206c4ab218471b4abc2b2f77d999
 
-##### 3 其中getMembersInfo
+- 3 其中getMembersInfo
 https://gist.github.com/daichangxin/dd69b8325e1bd82756432f4681a566f5
 
-### 代码导出风格如下：
+## 代码导出风格如下：
 1、每个fairygui的包，导出对应一个文件，如包名为farm,则导出的文件是`${设置的导出目录}/farm.ts`
 
 2、为了方便区分定义导出，所有文件默认添加`namespace c`作为命名空间。
