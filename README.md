@@ -1,5 +1,6 @@
 ## gen-package-defines-plugin
 将包中设置为“导出”的组件导出interface定义。适合typescript项目，如Egret、Laya、CocosCreator...
+
 仅支持FairyGUI-Editor2020版本，之前的版本插件请前往：https://github.com/daichangxin/AutoGenerateCodePlugin
 
 ## 使用
