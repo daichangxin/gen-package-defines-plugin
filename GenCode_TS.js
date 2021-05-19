@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.genCode = void 0;
 const CodeWriter_1 = require("./CodeWriter");
 const PackageCodeGen_1 = require("./PackageCodeGen");
-const genCode = (handler) => {
+exports.genCode = (handler) => {
     // convert chinese to pinyin, remove special chars etc.
     const codePkgName = handler.ToFilename(handler.pkg.name);
     const exportCodePath = `${handler.exportCodePath}`;
@@ -17,7 +17,7 @@ const genCode = (handler) => {
     });
     const codes = [];
     codes.push('/* eslint-disable */');
-    codes.push(`namespace c`);
+    codes.push(`declare namespace c`);
     codes.push(`{`);
     codes.push(...pkgCodes);
     codes.push(`}`);
@@ -26,4 +26,3 @@ const genCode = (handler) => {
     }
     writer.save(`${exportCodePath}/${codePkgName}.ts`);
 };
-exports.genCode = genCode;

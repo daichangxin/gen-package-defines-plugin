@@ -17,7 +17,7 @@ export const genCode = (handler: FairyEditor.PublishHandler) => {
 
     const codes: string[] = [];
     codes.push('/* eslint-disable */');
-    codes.push(`namespace c`);
+    codes.push(`declare namespace c`);
     codes.push(`{`);
     codes.push(...pkgCodes);
     codes.push(`}`);

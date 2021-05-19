@@ -3,14 +3,12 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.onDestroy = exports.onPublish = void 0;
 const GenCode_TS_1 = require("./GenCode_TS");
-const onPublish = (handler) => {
+exports.onPublish = (handler) => {
     if (!handler.genCode)
         return;
     handler.genCode = false;
     GenCode_TS_1.genCode(handler);
 };
-exports.onPublish = onPublish;
-const onDestroy = () => {
+exports.onDestroy = () => {
     // do cleanup here
 };
-exports.onDestroy = onDestroy;

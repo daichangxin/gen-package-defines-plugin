@@ -20,7 +20,7 @@ https://gist.github.com/daichangxin/dd69b8325e1bd82756432f4681a566f5
 ## 代码导出风格如下：
 1、每个fairygui的包，导出对应一个文件，如包名为farm，则导出的文件是`${设置的导出目录}/farm.ts`
 
-2、为了方便区分定义导出，所有文件默认添加`namespace c`作为命名空间。
+2、为了方便区分定义导出，所有文件默认添加`declare namespace c`作为命名空间。
 
 3、例子
 ```
